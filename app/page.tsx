@@ -1,4 +1,5 @@
 "use client";
+import SideBar from "@/public/Components/SideBar/SideBar";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -12,7 +13,11 @@ export default function Home() {
 
   return (
     <>
-      <h1>hello guys</h1>
+      <div className="row justify-content-center align-items-center py-2 px-1 m-0">
+        <div className="col-12 text-center">
+          <h4>welcome to your friendly event card designer</h4>
+        </div>
+      </div>
     </>
   );
 }
