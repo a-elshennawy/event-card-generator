@@ -9,6 +9,10 @@ export default function CardDesign() {
     position,
     website,
     selectedFont,
+    height,
+    width,
+    borderRadius,
+    padding,
     backgroundColor_one,
     backgroundColor_two,
     gradientDegree,
@@ -28,6 +32,10 @@ export default function CardDesign() {
             fontFamily: selectedFont,
             background: `linear-gradient(${gradientDegree}deg, ${backgroundColor_one},${backgroundColor_two})`,
             color: textColor,
+            height: `${height}px`,
+            width: `${width}px`,
+            borderRadius: `${borderRadius}px`,
+            padding: `${padding}px`,
           }}
         >
           <div

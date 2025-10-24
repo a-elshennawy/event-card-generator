@@ -10,6 +10,10 @@ interface UserCardState {
   website: string;
   selectedFont: string;
   fontSize: number;
+  height: number;
+  width: number;
+  borderRadius: number;
+  padding: number;
   backgroundColor_one: string;
   backgroundColor_two: string;
   gradientDegree: number;
@@ -24,6 +28,10 @@ interface UserCardState {
   setWebsite: (website: string) => void;
   setSelectedFont: (font: string) => void;
   setFontSize: (size: number) => void;
+  setHeight: (height: number) => void;
+  setWidth: (width: number) => void;
+  setBorderRadius: (radius: number) => void;
+  setPadding: (padding: number) => void;
   setBackgroundColor_one: (color: string) => void;
   setBackgroundColor_two: (color: string) => void;
   setGradientDegree: (degree: number) => void;
@@ -42,6 +50,10 @@ export const useCardStore = create<UserCardState>((set) => ({
   website: "",
   selectedFont: "Roboto",
   fontSize: 16,
+  height: 800,
+  width: 600,
+  borderRadius: 10,
+  padding: 20,
   backgroundColor_one: "#000",
   backgroundColor_two: "#fff",
   gradientDegree: 45,
@@ -56,6 +68,10 @@ export const useCardStore = create<UserCardState>((set) => ({
   setWebsite: (website) => set({ website }),
   setSelectedFont: (selectedFont) => set({ selectedFont }),
   setFontSize: (fontSize) => set({ fontSize }),
+  setHeight: (height) => set({ height }),
+  setWidth: (width) => set({ width }),
+  setBorderRadius: (borderRadius) => set({ borderRadius }),
+  setPadding: (padding) => set({ padding }),
   setBackgroundColor_one: (backgroundColor_one) => set({ backgroundColor_one }),
   setBackgroundColor_two: (backgroundColor_two) => set({ backgroundColor_two }),
   setGradientDegree: (gradientDegree) => set({ gradientDegree }),

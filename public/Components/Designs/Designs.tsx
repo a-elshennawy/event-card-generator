@@ -4,7 +4,9 @@ import { useCardStore } from "@/public/Store/useCardStore";
 import { MdRotate90DegreesCw } from "react-icons/md";
 
 export default function Designs() {
-  const [activeTab, setActiveTab] = useState<"designs" | "colors">("designs");
+  const [activeTab, setActiveTab] = useState<
+    "templates" | "colors" | "dimensions"
+  >("colors");
   const {
     backgroundColor_one,
     backgroundColor_two,
@@ -13,6 +15,10 @@ export default function Designs() {
     secondaryColor,
     gradientDegree,
     thirdColor,
+    height,
+    width,
+    borderRadius,
+    padding,
     setBackgroundColor_one,
     setBackgroundColor_two,
     setGradientDegree,
@@ -20,16 +26,20 @@ export default function Designs() {
     setPrimaryColor,
     setSecondaryColor,
     setThirdColor,
+    setHeight,
+    setWidth,
+    setBorderRadius,
+    setPadding,
   } = useCardStore();
   return (
     <>
       <div className="col-3 designSection m-0 p-3">
         <div className="switchTab text-center mb-2 p-2">
           <button
-            className={activeTab == "designs" ? "selected" : ""}
-            onClick={() => setActiveTab("designs")}
+            className={activeTab == "templates" ? "selected" : ""}
+            onClick={() => setActiveTab("templates")}
           >
-            Designs
+            Templates
           </button>
           <button
             className={activeTab == "colors" ? "selected" : ""}
@@ -37,10 +47,23 @@ export default function Designs() {
           >
             Colors
           </button>
+          <button
+            className={activeTab == "dimensions" ? "selected" : ""}
+            onClick={() => setActiveTab("dimensions")}
+          >
+            Dimensions
+          </button>
         </div>
+
+        {activeTab === "templates" && (
+          <div className="designInnerSection text-center p-3 m-0">
+            <h3 className="py-2 m-0">SOON !!!</h3>
+          </div>
+        )}
+
         {activeTab === "colors" && (
-          <div className="colorSelections p-3 m-0">
-            <div className="colorContainer mb-3 p-2">
+          <div className="designInnerSection p-3 m-0">
+            <div className="inputContainer mb-3 p-2">
               <label>background color - 1</label>
               <input
                 type="color"
@@ -57,7 +80,7 @@ export default function Designs() {
                 <MdRotate90DegreesCw />
               </span>
             </div>
-            <div className="colorContainer mb-3 p-2">
+            <div className="inputContainer mb-3 p-2">
               <label>background color - 2</label>
               <input
                 type="color"
@@ -65,7 +88,7 @@ export default function Designs() {
                 onChange={(e) => setBackgroundColor_two(e.target.value)}
               />
             </div>
-            <div className="colorContainer mb-3 p-2">
+            <div className="inputContainer mb-3 p-2">
               <label>text color</label>
               <input
                 type="color"
@@ -73,7 +96,7 @@ export default function Designs() {
                 onChange={(e) => setTextColor(e.target.value)}
               />
             </div>
-            <div className="colorContainer mb-3 p-2">
+            <div className="inputContainer mb-3 p-2">
               <label>primary color</label>
               <input
                 type="color"
@@ -81,7 +104,7 @@ export default function Designs() {
                 onChange={(e) => setPrimaryColor(e.target.value)}
               />
             </div>
-            <div className="colorContainer mb-3 p-2">
+            <div className="inputContainer mb-3 p-2">
               <label>secondery color</label>
               <input
                 type="color"
@@ -89,7 +112,7 @@ export default function Designs() {
                 onChange={(e) => setSecondaryColor(e.target.value)}
               />
             </div>
-            <div className="colorContainer p-2">
+            <div className="inputContainer p-2">
               <label>third color</label>
               <input
                 type="color"
@@ -99,9 +122,49 @@ export default function Designs() {
             </div>
           </div>
         )}
-        {activeTab === "designs" && (
-          <div className="designSelections text-center">
-            <h3 className="py-2 m-0">designs will be added soon!!</h3>
+
+        {activeTab === "dimensions" && (
+          <div className="designInnerSection text-center p-3 m-0">
+            <div className="inputContainer mb-3 p-2">
+              <label>height</label>
+              <input
+                className="dimensionInp"
+                type="number"
+                value={height}
+                onChange={(e) => setHeight(Number(e.target.value))}
+              />
+              <strong className="ms-2"> px</strong>
+            </div>
+            <div className="inputContainer mb-3 p-2">
+              <label>width</label>
+              <input
+                className="dimensionInp"
+                type="number"
+                value={width}
+                onChange={(e) => setWidth(Number(e.target.value))}
+              />
+              <strong className="ms-2"> px</strong>
+            </div>
+            <div className="inputContainer mb-3 p-2">
+              <label>border radius</label>
+              <input
+                className="dimensionInp"
+                type="number"
+                value={borderRadius}
+                onChange={(e) => setBorderRadius(Number(e.target.value))}
+              />
+              <strong className="ms-2"> px</strong>
+            </div>
+            <div className="inputContainer mb-3 p-2">
+              <label>padding</label>
+              <input
+                className="dimensionInp"
+                type="number"
+                value={padding}
+                onChange={(e) => setPadding(Number(e.target.value))}
+              />
+              <strong className="ms-2"> px</strong>
+            </div>
           </div>
         )}
       </div>
