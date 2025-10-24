@@ -1,0 +1,44 @@
+@font-face {
+  font-family: BBHSansHegarty;
+  src: url("/assets/fonts/BBHSansHegarty.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Bungee;
+  src: url("/assets/fonts/Bungee") format("truetype");
+}
+
+@font-face {
+  font-family: JosefinSans;
+  src: url("/assets/fonts/JosefinSans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Owsland;
+  src: url("/assets/fonts/Owsland.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: PlaywriteDESAS;
+  src: url("/assets/fonts/PlaywriteDESAS.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("/assets/fonts/Roboto.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ShareTech;
+  src: url("/assets/fonts/ShareTech.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: TitilliumWeb;
+  src: url("/assets/fonts/TitilliumWeb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("/assets/fonts/Ubuntu.ttf") format("truetype");
+}

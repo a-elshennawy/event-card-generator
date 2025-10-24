@@ -1,4 +1,6 @@
 "use client";
+import CardDesign from "@/public/Components/CardDesign/CardDesign";
+import Designs from "@/public/Components/Designs/Designs";
 import SideBar from "@/public/Components/SideBar/SideBar";
 import { useEffect } from "react";
 
@@ -13,10 +15,10 @@ export default function Home() {
 
   return (
     <>
-      <div className="row justify-content-center align-items-center py-2 px-1 m-0">
-        <div className="col-12 text-center">
-          <h4>welcome to your friendly event card designer</h4>
-        </div>
+      <div className="container-fluid row justify-content-between align-items-start py-4 m-0">
+        <SideBar />
+        <CardDesign />
+        <Designs />
       </div>
     </>
   );
