@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import HeadBar from "@/public/Components/HeadBar/HeadBar";
 
 export const metadata: Metadata = {
   title: "Events Cards Generator",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <HeadBar />
+        {children}
+      </body>
     </html>
   );
 }

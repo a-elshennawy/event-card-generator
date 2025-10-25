@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="container-fluid row justify-content-between align-items-start py-4 m-0">
+      <div className="container-fluid row justify-content-evenly align-items-start py-4 m-0">
         <SideBar />
         <CardDesign />
         <Designs />

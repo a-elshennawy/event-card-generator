@@ -14,6 +14,26 @@ html {
   background-color: var(--bodyBG) !important;
 }
 
+.headBar {
+  background: var(--sectionsBG);
+  button {
+    background: var(--sectionsBG);
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #9292925d;
+    box-shadow: 0 0 5px #000;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      margin-inline-start: 8px;
+      font-size: 18px;
+    }
+  }
+}
+
 .sideBar {
   background: var(--sectionsBG);
   color: #fff;
@@ -89,14 +109,14 @@ html {
   background: var(--sectionsBG);
   padding: 20px;
   border-radius: 10px;
+  width: fit-content !important;
 
   .cardDesign {
     position: relative;
-    border-radius: 10px;
     border: 1px solid #000;
-    padding: 20px;
     margin: 0px auto !important;
     background-color: #000;
+    padding: 20px;
     color: #fff;
 
     .mainInfo {
@@ -133,6 +153,15 @@ html {
       height: 150px;
       border-radius: 80% 30% 30% 30%;
       z-index: 111;
+    }
+    .shapeThree {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      width: 100px;
+      height: 100px;
+      border-radius: 80% 30% 30% 30%;
+      z-index: 1111;
     }
   }
 }

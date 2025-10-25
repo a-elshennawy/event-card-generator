@@ -18,7 +18,6 @@ export default function Designs() {
     height,
     width,
     borderRadius,
-    padding,
     setBackgroundColor_one,
     setBackgroundColor_two,
     setGradientDegree,
@@ -29,7 +28,6 @@ export default function Designs() {
     setHeight,
     setWidth,
     setBorderRadius,
-    setPadding,
   } = useCardStore();
   return (
     <>
@@ -145,23 +143,13 @@ export default function Designs() {
               />
               <strong className="ms-2"> px</strong>
             </div>
-            <div className="inputContainer mb-3 p-2">
+            <div className="inputContainer p-2">
               <label>border radius</label>
               <input
                 className="dimensionInp"
                 type="number"
                 value={borderRadius}
                 onChange={(e) => setBorderRadius(Number(e.target.value))}
-              />
-              <strong className="ms-2"> px</strong>
-            </div>
-            <div className="inputContainer mb-3 p-2">
-              <label>padding</label>
-              <input
-                className="dimensionInp"
-                type="number"
-                value={padding}
-                onChange={(e) => setPadding(Number(e.target.value))}
               />
               <strong className="ms-2"> px</strong>
             </div>

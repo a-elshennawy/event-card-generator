@@ -13,7 +13,6 @@ interface UserCardState {
   height: number;
   width: number;
   borderRadius: number;
-  padding: number;
   backgroundColor_one: string;
   backgroundColor_two: string;
   gradientDegree: number;
@@ -31,7 +30,6 @@ interface UserCardState {
   setHeight: (height: number) => void;
   setWidth: (width: number) => void;
   setBorderRadius: (radius: number) => void;
-  setPadding: (padding: number) => void;
   setBackgroundColor_one: (color: string) => void;
   setBackgroundColor_two: (color: string) => void;
   setGradientDegree: (degree: number) => void;
@@ -53,14 +51,13 @@ export const useCardStore = create<UserCardState>((set) => ({
   height: 800,
   width: 600,
   borderRadius: 10,
-  padding: 20,
   backgroundColor_one: "#000",
   backgroundColor_two: "#fff",
   gradientDegree: 45,
   textColor: "#fff",
   primaryColor: "#fff",
-  secondaryColor: "#fd0",
-  thirdColor: "#f00",
+  secondaryColor: "#fff",
+  thirdColor: "#000",
   setLogo: (logo) => set({ logo }),
   setCompanyName: (companyName) => set({ companyName }),
   setName: (name) => set({ name }),
@@ -71,7 +68,6 @@ export const useCardStore = create<UserCardState>((set) => ({
   setHeight: (height) => set({ height }),
   setWidth: (width) => set({ width }),
   setBorderRadius: (borderRadius) => set({ borderRadius }),
-  setPadding: (padding) => set({ padding }),
   setBackgroundColor_one: (backgroundColor_one) => set({ backgroundColor_one }),
   setBackgroundColor_two: (backgroundColor_two) => set({ backgroundColor_two }),
   setGradientDegree: (gradientDegree) => set({ gradientDegree }),
