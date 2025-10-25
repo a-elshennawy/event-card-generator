@@ -50,7 +50,7 @@ html {
       text-transform: capitalize;
       font-weight: bold;
       margin-bottom: 5px;
-      font-family: Ubuntu;
+      font-family: Ubuntu, Zain !important;
 
       svg {
         font-size: 20px;
@@ -64,6 +64,7 @@ html {
       border-radius: 8px;
       box-shadow: 0 0 5px #000;
       color: #fff;
+      font-family: Ubuntu, Zain !important;
 
       &::placeholder {
         color: #fff;
@@ -79,12 +80,21 @@ html {
     .dropend {
       .dropdown-menu {
         background: var(--sectionsBG);
+        max-height: 300px;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
         .dropdown-item {
           color: #fff;
           cursor: pointer;
           &:hover {
             background: var(--sectionsBG);
           }
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
         }
       }
     }
@@ -171,7 +181,7 @@ html {
   background: var(--sectionsBG);
   border-radius: 10px;
   color: #fff;
-  font-family: Ubuntu !important;
+  font-family: Ubuntu, Zain !important;
 
   .switchTab {
     button {

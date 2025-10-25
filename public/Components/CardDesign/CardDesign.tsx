@@ -62,11 +62,13 @@ export default function CardDesign() {
               {companyName || "organization name"}
             </h1>
           </div>
-          <h1 className={`m-0 p-0 ${!name ? "placeholder-text" : ""}`}>
+          <h1 className={`m-0 p-0 pb-1 ${!name ? "placeholder-text" : ""}`}>
             {name || "person name"}
           </h1>
 
-          <h3 className={`mb-3 p-0 ${!position ? "placeholder-text" : ""}`}>
+          <h3
+            className={`mb-3 p-0 pb-1 ${!position ? "placeholder-text" : ""}`}
+          >
             {position || "person position"}
           </h3>
         </div>

@@ -42,3 +42,123 @@
   font-family: Ubuntu;
   src: url("/assets/fonts/Ubuntu.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: Alkalami;
+  src: url("/assets/fonts/Alkalami-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Almarai;
+  src: url("/assets/fonts/Almarai-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Amiri;
+  src: url("/assets/fonts/Amiri-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Arvo;
+  src: url("/assets/fonts/Arvo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Cairo;
+  src: url("/assets/fonts/Cairo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: CairoPlay;
+  src: url("/assets/fonts/CairoPlay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Caveat;
+  src: url("/assets/fonts/Caveat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Exo2;
+  src: url("/assets/fonts/Exo2-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IndieFlower;
+  src: url("/assets/fonts/IndieFlower-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Lalezar;
+  src: url("/assets/fonts/Lalezar-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Lemonada;
+  src: url("/assets/fonts/Lemonada-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: LobsterTwo;
+  src: url("/assets/fonts/LobsterTwo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Mada;
+  src: url("/assets/fonts/Mada-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Michroma;
+  src: url("/assets/fonts/Michroma-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Orbitron;
+  src: url("/assets/fonts/Orbitron-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: PlaypenSansArabic;
+  src: url("/assets/fonts/PlaypenSansArabic-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Rakkas;
+  src: url("/assets/fonts/Rakkas-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ReadexPro;
+  src: url("/assets/fonts/ReadexPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ReemKufi;
+  src: url("/assets/fonts/ReemKufi-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ReemKufiFun;
+  src: url("/assets/fonts/ReemKufiFun-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SedanSC;
+  src: url("/assets/fonts/SedanSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SmoochSans;
+  src: url("/assets/fonts/SmoochSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Zain;
+  src: url("/assets/fonts/Zain-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: BadeenDisplay;
+  src: url("/assets/fonts/BadeenDisplay-Regular.ttf") format("truetype");
+}
