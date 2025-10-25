@@ -1,11 +1,12 @@
 "use client";
-import { GrNext } from "react-icons/gr";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import { useCardStore } from "@/public/Store/useCardStore";
+import { BsFiletypePdf, BsFiletypePng } from "react-icons/bs";
 
 export default function HeadBar() {
   const { name } = useCardStore();
+
   const downloadPDF = async () => {
     const cardElement = document.querySelector(".cardDesign") as HTMLElement;
 
@@ -25,7 +26,7 @@ export default function HeadBar() {
       // Capture the card as image with transparent background and high quality
       const canvas = await html2canvas(cardElement, {
         backgroundColor: null,
-        scale: 3, // 3x resolution for high quality
+        scale: 2, // 2x resolution for high quality
         useCORS: true, // Allow cross-origin images (like logos)
         allowTaint: true,
         logging: false,
@@ -65,11 +66,58 @@ export default function HeadBar() {
     }
   };
 
+  const downloadPNG = async () => {
+    const cardElement = document.querySelector(".cardDesign") as HTMLElement;
+
+    if (!cardElement) {
+      console.error("card not found");
+      alert("please create a card first");
+      return;
+    }
+
+    try {
+      const placeholders = cardElement.querySelectorAll(".placeholder-text");
+      placeholders.forEach((el) => {
+        (el as HTMLElement).style.display = "none";
+      });
+
+      const canvas = await html2canvas(cardElement, {
+        backgroundColor: null,
+        scale: 3,
+        useCORS: true,
+        allowTaint: true,
+        logging: false,
+      });
+      const imageData = canvas.toDataURL("image/png");
+
+      const link = document.createElement("a");
+      link.download = `${name}-card.png`;
+      link.href = imageData;
+      link.click();
+
+      placeholders.forEach((el) => {
+        (el as HTMLElement).style.display = "";
+      });
+    } catch (error) {
+      console.error("Error generating PNG:", error);
+      alert("Failed to generate PNG");
+
+      const placeholders = cardElement.querySelectorAll(".placeholder-text");
+      placeholders.forEach((el) => {
+        (el as HTMLElement).style.display = "";
+      });
+    }
+  };
+
   return (
     <>
-      <div className="headBar col-12 text-end m-0 p-1">
-        <button onClick={downloadPDF}>
-          Next <GrNext />
+      <div className="headBar col-12 text-end m-0 mb-3 px-1 py-2">
+        <button className="me-2" onClick={downloadPDF}>
+          Download .Pdf <BsFiletypePdf />
+        </button>
+
+        <button onClick={downloadPNG}>
+          Download .Png <BsFiletypePng />
         </button>
       </div>
     </>

@@ -16,6 +16,7 @@ html {
 
 .headBar {
   background: var(--sectionsBG);
+
   button {
     background: var(--sectionsBG);
     color: #fff;
@@ -29,7 +30,7 @@ html {
 
     svg {
       margin-inline-start: 8px;
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 }
@@ -245,5 +246,20 @@ html {
         }
       }
     }
+  }
+}
+
+.inner {
+  background: var(--sectionsBG);
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  svg {
+    font-size: 50px;
+    color: #fd0000;
+    filter: drop-shadow(0 0 5px #fd0000);
   }
 }
