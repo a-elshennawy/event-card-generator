@@ -761,16 +761,14 @@ html {
 }
 
 .inner {
-  background: var(--sectionsBG);
   border-radius: 10px;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  transform: translateY(-40%);
+  font-family: Ubuntu, Zain !important;
 
   svg {
     font-size: 50px;
     color: #fd0000;
-    filter: drop-shadow(0 0 5px #fd0000);
   }
 }
