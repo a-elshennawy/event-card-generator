@@ -5,10 +5,10 @@ import { useCardStore } from "@/public/Store/useCardStore";
 import { BsFiletypePdf, BsFiletypePng } from "react-icons/bs";
 
 export default function HeadBar() {
-  const { name } = useCardStore();
+  const { name, template } = useCardStore();
 
   const downloadPDF = async () => {
-    const cardElement = document.querySelector(".cardDesign") as HTMLElement;
+    const cardElement = document.querySelector(`.${template}`) as HTMLElement;
 
     if (!cardElement) {
       console.error("Card not found");
@@ -67,7 +67,7 @@ export default function HeadBar() {
   };
 
   const downloadPNG = async () => {
-    const cardElement = document.querySelector(".cardDesign") as HTMLElement;
+    const cardElement = document.querySelector(`.${template}`) as HTMLElement;
 
     if (!cardElement) {
       console.error("card not found");
