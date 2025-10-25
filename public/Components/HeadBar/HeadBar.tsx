@@ -67,7 +67,7 @@ export default function HeadBar() {
 
   return (
     <>
-      <div className="headBar col-12 text-end m-0 p-2">
+      <div className="headBar col-12 text-end m-0 p-1">
         <button onClick={downloadPDF}>
           Next <GrNext />
         </button>
