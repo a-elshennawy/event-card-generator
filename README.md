@@ -21,6 +21,8 @@ A modern web application for creating customizable event cards with multiple tem
 
 ### Main Interface
 
+![Screenshot](./public/ScreenShot.png)
+
 The application features a clean, dark-themed interface with three main sections:
 
 - **Left Sidebar**: Input fields for card content and logo upload
