@@ -19,6 +19,7 @@ export default function CardDesign() {
     primaryColor,
     secondaryColor,
     thirdColor,
+    template,
   } = useCardStore();
 
   const logoUrl = logo ? URL.createObjectURL(logo) : null;
@@ -26,7 +27,7 @@ export default function CardDesign() {
   return (
     <div className="col-5 cardContainer text-center m-0">
       <div
-        className="cardDesign"
+        className={template}
         style={{
           fontFamily: selectedFont,
           background: `linear-gradient(${gradientDegree}deg, ${backgroundColor_one},${backgroundColor_two})`,

@@ -20,6 +20,7 @@ interface UserCardState {
   primaryColor: string;
   secondaryColor: string;
   thirdColor: string;
+  template: string;
   setLogo: (logo: File | null) => void;
   setCompanyName: (companyName: string) => void;
   setName: (name: string) => void;
@@ -37,6 +38,7 @@ interface UserCardState {
   setPrimaryColor: (color: string) => void;
   setSecondaryColor: (color: string) => void;
   setThirdColor: (color: string) => void;
+  setTemplate: (template: string) => void;
 }
 
 // here to manage initial state and actions (maintainers of the store)
@@ -55,9 +57,10 @@ export const useCardStore = create<UserCardState>((set) => ({
   backgroundColor_two: "#fff",
   gradientDegree: 45,
   textColor: "#fff",
-  primaryColor: "#fff",
+  primaryColor: "#000",
   secondaryColor: "#fff",
   thirdColor: "#000",
+  template: "template_1",
   setLogo: (logo) => set({ logo }),
   setCompanyName: (companyName) => set({ companyName }),
   setName: (name) => set({ name }),
@@ -75,4 +78,5 @@ export const useCardStore = create<UserCardState>((set) => ({
   setPrimaryColor: (primaryColor) => set({ primaryColor }),
   setSecondaryColor: (secondaryColor) => set({ secondaryColor }),
   setThirdColor: (thirdColor) => set({ thirdColor }),
+  setTemplate: (template) => set({ template }),
 }));

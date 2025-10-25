@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCardStore } from "@/public/Store/useCardStore";
 import { MdRotate90DegreesCw } from "react-icons/md";
 
@@ -7,6 +7,9 @@ export default function Designs() {
   const [activeTab, setActiveTab] = useState<
     "templates" | "colors" | "dimensions"
   >("colors");
+  const [availableTemplates, setaAvailableTemplates] = useState<
+    Record<string, string>
+  >({});
   const {
     backgroundColor_one,
     backgroundColor_two,
@@ -18,6 +21,7 @@ export default function Designs() {
     height,
     width,
     borderRadius,
+    template,
     setBackgroundColor_one,
     setBackgroundColor_two,
     setGradientDegree,
@@ -28,7 +32,15 @@ export default function Designs() {
     setHeight,
     setWidth,
     setBorderRadius,
+    setTemplate,
   } = useCardStore();
+
+  useEffect(() => {
+    fetch("/API/templates.json")
+      .then((res) => res.json())
+      .then((data) => setaAvailableTemplates(data.template))
+      .catch((err) => console.error("Error fetching templates:", err));
+  }, []);
   return (
     <>
       <div className="col-3 designSection m-0 p-3">
@@ -54,8 +66,18 @@ export default function Designs() {
         </div>
 
         {activeTab === "templates" && (
-          <div className="designInnerSection text-center p-3 m-0">
-            <h3 className="py-2 m-0">SOON !!!</h3>
+          <div className="designInnerSection templatesSection text-center p-3 m-0 row justify-content-evenly align-items-center gap-3">
+            {Object.entries(availableTemplates).map(([key, value]) => (
+              <div
+                key={key}
+                className={`templateItem px-2 py-3 col-5 ${
+                  template === key ? "selected" : ""
+                }`}
+                onClick={() => setTemplate(key)}
+              >
+                <h3>Card {value}</h3>
+              </div>
+            ))}
           </div>
         )}
 
