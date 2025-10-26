@@ -4,12 +4,12 @@ export default function ScreenError() {
   return (
     <>
       <div className="inner col-12 text-center text-white m-0 p-3 m-0">
-        <h4>
+        <h5>
           The website requires a larger screen. Please access it from a desktop
           or laptop computer.
-        </h4>
+        </h5>
         <hr />
-        <h4 className="mb-3">يتطلب الموقع شاشه اكبر لإستخدامه بشكل أفضل</h4>
+        <h5 className="mb-3">يتطلب الموقع شاشه اكبر لإستخدامه بشكل أفضل</h5>
         <RiErrorWarningFill />
       </div>
     </>
