@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Activity } from "react";
 import { useCardStore } from "@/public/Store/useCardStore";
 import { MdRotate90DegreesCw } from "react-icons/md";
 
@@ -65,7 +65,7 @@ export default function Designs() {
           </button>
         </div>
 
-        {activeTab === "templates" && (
+        {/* {activeTab === "templates" && (
           <div className="designInnerSection templatesSection text-center p-3 m-0 row justify-content-evenly align-items-center gap-3">
             {Object.entries(availableTemplates).map(([key, value]) => (
               <div
@@ -79,9 +79,25 @@ export default function Designs() {
               </div>
             ))}
           </div>
-        )}
+        )} */}
 
-        {activeTab === "colors" && (
+        <Activity mode={activeTab == "templates" ? "visible" : "hidden"}>
+          <div className="designInnerSection templatesSection text-center p-3 m-0 row justify-content-evenly align-items-center gap-3">
+            {Object.entries(availableTemplates).map(([key, value]) => (
+              <div
+                key={key}
+                className={`templateItem px-2 py-3 col-5 ${
+                  template === key ? "selected" : ""
+                }`}
+                onClick={() => setTemplate(key)}
+              >
+                <h3>Card {value}</h3>
+              </div>
+            ))}
+          </div>
+        </Activity>
+
+        {/* {activeTab === "colors" && (
           <div className="designInnerSection p-3 m-0">
             <div className="inputContainer mb-3 p-2">
               <label>background color - 1</label>
@@ -141,9 +157,71 @@ export default function Designs() {
               />
             </div>
           </div>
-        )}
+        )} */}
 
-        {activeTab === "dimensions" && (
+        <Activity mode={activeTab == "colors" ? "visible" : "hidden"}>
+          <div className="designInnerSection p-3 m-0">
+            <div className="inputContainer mb-3 p-2">
+              <label>background color - 1</label>
+              <input
+                type="color"
+                value={backgroundColor_one}
+                onChange={(e) => setBackgroundColor_one(e.target.value)}
+              />
+              <input
+                className="grDegree"
+                type="number"
+                value={gradientDegree}
+                onChange={(e) => setGradientDegree(Number(e.target.value))}
+              />
+              <span className="ms-2">
+                <MdRotate90DegreesCw />
+              </span>
+            </div>
+            <div className="inputContainer mb-3 p-2">
+              <label>background color - 2</label>
+              <input
+                type="color"
+                value={backgroundColor_two}
+                onChange={(e) => setBackgroundColor_two(e.target.value)}
+              />
+            </div>
+            <div className="inputContainer mb-3 p-2">
+              <label>text color</label>
+              <input
+                type="color"
+                value={textColor}
+                onChange={(e) => setTextColor(e.target.value)}
+              />
+            </div>
+            <div className="inputContainer mb-3 p-2">
+              <label>primary color</label>
+              <input
+                type="color"
+                value={primaryColor}
+                onChange={(e) => setPrimaryColor(e.target.value)}
+              />
+            </div>
+            <div className="inputContainer mb-3 p-2">
+              <label>secondery color</label>
+              <input
+                type="color"
+                value={secondaryColor}
+                onChange={(e) => setSecondaryColor(e.target.value)}
+              />
+            </div>
+            <div className="inputContainer p-2">
+              <label>third color</label>
+              <input
+                type="color"
+                value={thirdColor}
+                onChange={(e) => setThirdColor(e.target.value)}
+              />
+            </div>
+          </div>
+        </Activity>
+
+        {/* {activeTab === "dimensions" && (
           <div className="designInnerSection text-center p-3 m-0">
             <div className="inputContainer mb-3 p-2">
               <label>height</label>
@@ -176,7 +254,42 @@ export default function Designs() {
               <strong className="ms-2"> px</strong>
             </div>
           </div>
-        )}
+        )} */}
+
+        <Activity mode={activeTab == "dimensions" ? "visible" : "hidden"}>
+          <div className="designInnerSection text-center p-3 m-0">
+            <div className="inputContainer mb-3 p-2">
+              <label>height</label>
+              <input
+                className="dimensionInp"
+                type="number"
+                value={height}
+                onChange={(e) => setHeight(Number(e.target.value))}
+              />
+              <strong className="ms-2"> px</strong>
+            </div>
+            <div className="inputContainer mb-3 p-2">
+              <label>width</label>
+              <input
+                className="dimensionInp"
+                type="number"
+                value={width}
+                onChange={(e) => setWidth(Number(e.target.value))}
+              />
+              <strong className="ms-2"> px</strong>
+            </div>
+            <div className="inputContainer p-2">
+              <label>border radius</label>
+              <input
+                className="dimensionInp"
+                type="number"
+                value={borderRadius}
+                onChange={(e) => setBorderRadius(Number(e.target.value))}
+              />
+              <strong className="ms-2"> px</strong>
+            </div>
+          </div>
+        </Activity>
       </div>
     </>
   );
