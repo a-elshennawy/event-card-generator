@@ -10,14 +10,12 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "gsap": "^3.14.2",
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.4",
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",
-    "three": "^0.182.0",
     "zustand": "^5.0.9"
   },
   "devDependencies": {

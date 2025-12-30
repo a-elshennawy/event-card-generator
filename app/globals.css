@@ -1,774 +1,774 @@
 @import url("./fonts.css");
 
 :root {
-  font-size: 16px;
-  --bodyBG: #000;
-  --sectionsBG: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    --bodyBG: #000;
+    --sectionsBG: rgba(255, 255, 255, 0.1);
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 body,
 html {
-  background-color: var(--bodyBG) !important;
+    background-color: var(--bodyBG) !important;
 }
 
 .headBar {
-  background: var(--sectionsBG);
-
-  button {
     background: var(--sectionsBG);
-    color: #fff;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: 1px solid #9292925d;
-    box-shadow: 0 0 5px #000;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
 
-    svg {
-      margin-inline-start: 8px;
-      font-size: 20px;
+    button {
+        background: var(--sectionsBG);
+        color: #fff;
+        font-weight: bold;
+        padding: 5px 10px;
+        border: 1px solid #9292925d;
+        box-shadow: 0 0 5px #000;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+
+        svg {
+            margin-inline-start: 8px;
+            font-size: 20px;
+        }
     }
-  }
 }
 
 .sideBar {
-  background: var(--sectionsBG);
-  color: #fff;
-  border-radius: 10px;
-
-  .inputContainer {
     background: var(--sectionsBG);
-    border-radius: 8px;
-    box-shadow: 0 0 5px #000;
+    color: #fff;
+    border-radius: 10px;
 
-    label {
-      display: block;
-      text-transform: capitalize;
-      font-weight: bold;
-      margin-bottom: 5px;
-      font-family: Ubuntu, Zain !important;
-
-      svg {
-        font-size: 20px;
-      }
-    }
-
-    input {
-      padding: 5px;
-      background: var(--sectionsBG);
-      border: 1px solid #9292925d;
-      border-radius: 8px;
-      box-shadow: 0 0 5px #000;
-      color: #fff;
-      font-family: Ubuntu, Zain !important;
-
-      &::placeholder {
-        color: #fff;
-      }
-
-      &:focus {
-        outline: none;
-        box-shadow: 0 0 8px #000;
-        transition: all 0.3s ease-in-out;
-      }
-    }
-
-    .dropend {
-      .dropdown-menu {
+    .inputContainer {
         background: var(--sectionsBG);
-        max-height: 300px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px #000;
+
+        label {
+            display: block;
+            text-transform: capitalize;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-family: Ubuntu, Zain !important;
+
+            svg {
+                font-size: 20px;
+            }
+        }
+
+        input {
+            padding: 5px;
+            background: var(--sectionsBG);
+            border: 1px solid #9292925d;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #000;
+            color: #fff;
+            font-family: Ubuntu, Zain !important;
+
+            &::placeholder {
+                color: #fff;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 8px #000;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        .dropend {
+            .dropdown-menu {
+                background: var(--sectionsBG);
+                max-height: 300px;
+                overflow-y: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+
+                .dropdown-item {
+                    color: #fff;
+                    cursor: pointer;
+                    &:hover {
+                        background: var(--sectionsBG);
+                    }
+                }
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
+
+        .uploadBtn,
+        .fontBtn {
+            border: 1px solid #9292925d;
+            box-shadow: 0 0 5px #000;
+            color: #fff;
+            border-radius: 6px;
+            background: var(--sectionsBG);
+            padding: 5px 10px;
+
+            &:hover {
+                box-shadow: 0 0 8px #000;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.cardContainer {
+    background: var(--sectionsBG);
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content !important;
+
+    .template_1 {
+        position: relative;
+        border: 1px solid #000;
+        margin: 0px auto !important;
+        background-color: #000;
+        padding: 20px;
+        color: #fff;
+
+        .mainInfo {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            width: max-content;
+            z-index: 111;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            color: #fff;
+            z-index: 111;
+        }
+
+        .shapeOne {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 85px;
+            height: 85px;
+            border-radius: 30% 30% 80% 30%;
+            z-index: 111;
+        }
+
+        .shapeTwo {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 150px;
+            height: 150px;
+            border-radius: 80% 30% 30% 30%;
+            z-index: 111;
+        }
+        .shapeThree {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            width: 100px;
+            height: 100px;
+            border-radius: 80% 30% 30% 30%;
+            z-index: 1111;
+        }
+    }
+
+    .template_2 {
+        position: relative;
+        border: 1px solid #000;
+        margin: 0px auto !important;
+        background-color: #000;
+        padding: 20px;
+        color: #fff;
+
+        .mainInfo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+            z-index: 111;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            z-index: 111;
+        }
+
+        .shapeOne {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 0 0 100% 0;
+            z-index: 1;
+        }
+
+        .shapeTwo {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 100% 0 0 0;
+            z-index: 1;
+        }
+
+        .shapeThree {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 0 0 0 100%;
+            z-index: 1;
+        }
+    }
+
+    .template_3 {
+        position: relative;
+        border: 1px solid #000;
+        margin: 0px auto !important;
+        background-color: #000;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+
+        .mainInfo {
+            position: absolute;
+            top: 35%;
+            left: 30%;
+            transform: translate(-30%, -35%);
+            width: max-content;
+            z-index: 111;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            color: #fff;
+            z-index: 111;
+        }
+
+        .shapeOne {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        .shapeTwo {
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0.5;
+        }
+
+        .shapeThree {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 400px;
+            height: 2px;
+            z-index: 1;
+        }
+    }
+
+    .template_4 {
+        position: relative;
+        border: 1px solid #000;
+        margin: 0px auto !important;
+        background-color: #000;
+        padding: 20px;
+        color: #fff;
+
+        .mainInfo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+            z-index: 111;
+            text-align: center;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            z-index: 111;
+        }
+
+        .shapeOne {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+
+        .shapeTwo {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 8px;
+            transform: rotate(25deg);
+            z-index: 1;
+        }
+
+        .shapeThree {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    }
+
+    .template_5 {
+        position: relative;
+        border: 1px solid #000;
+        margin: 0px auto !important;
+        background-color: #000;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+
+        .mainInfo {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -40%);
+            width: max-content;
+            z-index: 111;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            z-index: 111;
+        }
+
+        .shapeOne {
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            width: 200px;
+            height: 200px;
+            border-radius: 40% 60% 60% 40%;
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        .shapeTwo {
+            position: absolute;
+            bottom: -60px;
+            right: -60px;
+            width: 250px;
+            height: 250px;
+            border-radius: 60% 40% 40% 60%;
+            z-index: 1;
+            opacity: 0.4;
+        }
+
+        .shapeThree {
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50% 50% 50% 50%;
+            z-index: 1;
+            opacity: 0.3;
+        }
+    }
+
+    .template_6 {
+        position: relative;
+        border: 1px solid #000;
+        margin: 0px auto !important;
+        background-color: #000;
+        padding: 20px;
+        color: #fff;
+
+        .mainInfo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+            z-index: 111;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            z-index: 111;
+        }
+
+        .shapeOne {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 15px;
+            border: 3px solid;
+            z-index: 1;
+            background: transparent;
+        }
+
+        .shapeTwo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 3px;
+            z-index: 2;
+        }
+
+        .shapeThree {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 3px;
+            z-index: 2;
+        }
+    }
+
+    .template_7 {
+        position: relative;
+        border: 1px solid #000;
+        margin: 0px auto !important;
+        background-color: #000;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+
+        .mainInfo {
+            position: absolute;
+            top: 45%;
+            left: 55%;
+            transform: translate(-55%, -45%);
+            width: max-content;
+            z-index: 111;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            color: #fff;
+            z-index: 111;
+        }
+
+        .shapeOne {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 35%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.2;
+        }
+
+        .shapeTwo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 180px;
+            border-radius: 0 0 0 50%;
+            z-index: 2;
+            opacity: 0.6;
+        }
+
+        .shapeThree {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 0 100% 0 0;
+            z-index: 2;
+            opacity: 0.8;
+        }
+    }
+
+    .template_8 {
+        position: relative;
+        border: 1px solid #000;
+        margin: 0px auto !important;
+        background-color: #000;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+
+        .mainInfo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+            z-index: 111;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            z-index: 111;
+        }
+
+        .shapeOne {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            z-index: 1;
+            opacity: 0.25;
+            transform: rotate(15deg);
+        }
+
+        .shapeTwo {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            z-index: 2;
+            opacity: 0.4;
+            transform: rotate(30deg);
+        }
+
+        .shapeThree {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            z-index: 3;
+            opacity: 0.6;
+            transform: rotate(45deg);
+        }
+    }
+
+    .template_9 {
+        position: relative;
+        border: 1px solid #000;
+        margin: 0px auto !important;
+        background-color: #000;
+        padding: 20px;
+        color: #fff;
+
+        .mainInfo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+            z-index: 111;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            z-index: 111;
+        }
+
+        .shapeOne {
+            position: absolute;
+            top: 0;
+            left: 30%;
+            width: 2px;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.4;
+        }
+
+        .shapeTwo {
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            z-index: 1;
+            opacity: 0.4;
+        }
+
+        .shapeThree {
+            position: absolute;
+            bottom: 0;
+            right: 25%;
+            width: 2px;
+            height: 70%;
+            z-index: 1;
+            opacity: 0.4;
+        }
+    }
+}
+
+.designSection {
+    background: var(--sectionsBG);
+    border-radius: 10px;
+    color: #fff;
+    font-family: Ubuntu, Zain !important;
+
+    .switchTab {
+        button {
+            background: var(--sectionsBG);
+            border: 1px solid #9292925d;
+            box-shadow: 0 0 5px #000;
+            color: #fff;
+            border-radius: 8px;
+            padding: 5px 10px;
+            margin: 0px 5px;
+            font-weight: bold;
+        }
+
+        .selected {
+            box-shadow: 0 0 8px #000;
+            transition: all 0.3s ease-in-out;
+            background-color: #fff;
+            color: #000;
+        }
+    }
+
+    .designInnerSection {
+        background: var(--sectionsBG);
+        border-radius: 8px;
+        box-shadow: 0 0 5px #000;
+
+        .inputContainer {
+            background: var(--sectionsBG);
+            border-radius: 8px;
+            box-shadow: 0 0 5px #000;
+            display: flex;
+            align-items: center;
+            align-content: center;
+
+            label {
+                display: inline-block;
+                text-transform: capitalize;
+                font-weight: bold;
+            }
+
+            input {
+                margin-inline-start: 15px;
+                cursor: pointer;
+                background: var(--sectionsBG);
+            }
+
+            .grDegree,
+            .dimensionInp {
+                background: var(--sectionsBG);
+                border: 1px solid #9292925d;
+                box-shadow: 0 0 5px #000;
+                color: #fff;
+                border-radius: 8px;
+                padding: 5px;
+                margin-inline-start: 10px;
+                width: 50px;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 8px #000;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            .dimensionInp {
+                width: 70px;
+            }
+
+            span {
+                svg {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .templateItem {
+            background: var(--sectionsBG);
+            border-radius: 8px;
+            box-shadow: 0 0 10px #000;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .selected {
+            box-shadow: 0 0 20px #000;
+            transform: scale(1.1);
+        }
+    }
+
+    .templatesSection {
+        max-height: 550px;
         overflow-y: auto;
         scrollbar-width: none;
         -ms-overflow-style: none;
 
-        .dropdown-item {
-          color: #fff;
-          cursor: pointer;
-          &:hover {
-            background: var(--sectionsBG);
-          }
-        }
-
         &::-webkit-scrollbar {
-          display: none;
+            display: none;
         }
-      }
     }
-
-    .uploadBtn,
-    .fontBtn {
-      border: 1px solid #9292925d;
-      box-shadow: 0 0 5px #000;
-      color: #fff;
-      border-radius: 6px;
-      background: var(--sectionsBG);
-      padding: 5px 10px;
-
-      &:hover {
-        box-shadow: 0 0 8px #000;
-        transition: all 0.3s ease-in-out;
-      }
-    }
-  }
-}
-
-.cardContainer {
-  background: var(--sectionsBG);
-  padding: 20px;
-  border-radius: 10px;
-  width: fit-content !important;
-
-  .template_1 {
-    position: relative;
-    border: 1px solid #000;
-    margin: 0px auto !important;
-    background-color: #000;
-    padding: 20px;
-    color: #fff;
-
-    .mainInfo {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -30%);
-      width: max-content;
-      z-index: 111;
-    }
-
-    .link {
-      position: absolute;
-      bottom: 0;
-      left: 10px;
-      color: #fff;
-      z-index: 111;
-    }
-
-    .shapeOne {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      width: 85px;
-      height: 85px;
-      border-radius: 30% 30% 80% 30%;
-      z-index: 111;
-    }
-
-    .shapeTwo {
-      position: absolute;
-      bottom: 5px;
-      right: 5px;
-      width: 150px;
-      height: 150px;
-      border-radius: 80% 30% 30% 30%;
-      z-index: 111;
-    }
-    .shapeThree {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      width: 100px;
-      height: 100px;
-      border-radius: 80% 30% 30% 30%;
-      z-index: 1111;
-    }
-  }
-
-  .template_2 {
-    position: relative;
-    border: 1px solid #000;
-    margin: 0px auto !important;
-    background-color: #000;
-    padding: 20px;
-    color: #fff;
-
-    .mainInfo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: max-content;
-      z-index: 111;
-    }
-
-    .link {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #fff;
-      z-index: 111;
-    }
-
-    .shapeOne {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 120px;
-      height: 120px;
-      border-radius: 0 0 100% 0;
-      z-index: 1;
-    }
-
-    .shapeTwo {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100px;
-      height: 100px;
-      border-radius: 100% 0 0 0;
-      z-index: 1;
-    }
-
-    .shapeThree {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 80px;
-      height: 80px;
-      border-radius: 0 0 0 100%;
-      z-index: 1;
-    }
-  }
-
-  .template_3 {
-    position: relative;
-    border: 1px solid #000;
-    margin: 0px auto !important;
-    background-color: #000;
-    padding: 20px;
-    color: #fff;
-    overflow: hidden;
-
-    .mainInfo {
-      position: absolute;
-      top: 35%;
-      left: 30%;
-      transform: translate(-30%, -35%);
-      width: max-content;
-      z-index: 111;
-    }
-
-    .link {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      color: #fff;
-      z-index: 111;
-    }
-
-    .shapeOne {
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      z-index: 1;
-      opacity: 0.3;
-    }
-
-    .shapeTwo {
-      position: absolute;
-      bottom: -80px;
-      left: -80px;
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      z-index: 1;
-      opacity: 0.5;
-    }
-
-    .shapeThree {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
-      width: 400px;
-      height: 2px;
-      z-index: 1;
-    }
-  }
-
-  .template_4 {
-    position: relative;
-    border: 1px solid #000;
-    margin: 0px auto !important;
-    background-color: #000;
-    padding: 20px;
-    color: #fff;
-
-    .mainInfo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: max-content;
-      z-index: 111;
-      text-align: center;
-    }
-
-    .link {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #fff;
-      z-index: 111;
-    }
-
-    .shapeOne {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 60px;
-      height: 60px;
-      border-radius: 8px;
-      transform: rotate(45deg);
-      z-index: 1;
-    }
-
-    .shapeTwo {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 90px;
-      height: 90px;
-      border-radius: 8px;
-      transform: rotate(25deg);
-      z-index: 1;
-    }
-
-    .shapeThree {
-      position: absolute;
-      top: 50%;
-      right: 15px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-  }
-
-  .template_5 {
-    position: relative;
-    border: 1px solid #000;
-    margin: 0px auto !important;
-    background-color: #000;
-    padding: 20px;
-    color: #fff;
-    overflow: hidden;
-
-    .mainInfo {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -40%);
-      width: max-content;
-      z-index: 111;
-    }
-
-    .link {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: #fff;
-      z-index: 111;
-    }
-
-    .shapeOne {
-      position: absolute;
-      top: -40px;
-      left: -40px;
-      width: 200px;
-      height: 200px;
-      border-radius: 40% 60% 60% 40%;
-      z-index: 1;
-      opacity: 0.6;
-    }
-
-    .shapeTwo {
-      position: absolute;
-      bottom: -60px;
-      right: -60px;
-      width: 250px;
-      height: 250px;
-      border-radius: 60% 40% 40% 60%;
-      z-index: 1;
-      opacity: 0.4;
-    }
-
-    .shapeThree {
-      position: absolute;
-      top: 50%;
-      left: -30px;
-      width: 150px;
-      height: 150px;
-      border-radius: 50% 50% 50% 50%;
-      z-index: 1;
-      opacity: 0.3;
-    }
-  }
-
-  .template_6 {
-    position: relative;
-    border: 1px solid #000;
-    margin: 0px auto !important;
-    background-color: #000;
-    padding: 20px;
-    color: #fff;
-
-    .mainInfo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: max-content;
-      z-index: 111;
-    }
-
-    .link {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #fff;
-      z-index: 111;
-    }
-
-    .shapeOne {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      border-radius: 15px;
-      border: 3px solid;
-      z-index: 1;
-      background: transparent;
-    }
-
-    .shapeTwo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 80px;
-      height: 3px;
-      z-index: 2;
-    }
-
-    .shapeThree {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 80px;
-      height: 3px;
-      z-index: 2;
-    }
-  }
-
-  .template_7 {
-    position: relative;
-    border: 1px solid #000;
-    margin: 0px auto !important;
-    background-color: #000;
-    padding: 20px;
-    color: #fff;
-    overflow: hidden;
-
-    .mainInfo {
-      position: absolute;
-      top: 45%;
-      left: 55%;
-      transform: translate(-55%, -45%);
-      width: max-content;
-      z-index: 111;
-    }
-
-    .link {
-      position: absolute;
-      bottom: 15px;
-      right: 20px;
-      color: #fff;
-      z-index: 111;
-    }
-
-    .shapeOne {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 35%;
-      height: 100%;
-      z-index: 1;
-      opacity: 0.2;
-    }
-
-    .shapeTwo {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100px;
-      height: 180px;
-      border-radius: 0 0 0 50%;
-      z-index: 2;
-      opacity: 0.6;
-    }
-
-    .shapeThree {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 120px;
-      height: 120px;
-      border-radius: 0 100% 0 0;
-      z-index: 2;
-      opacity: 0.8;
-    }
-  }
-
-  .template_8 {
-    position: relative;
-    border: 1px solid #000;
-    margin: 0px auto !important;
-    background-color: #000;
-    padding: 20px;
-    color: #fff;
-    overflow: hidden;
-
-    .mainInfo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: max-content;
-      z-index: 111;
-    }
-
-    .link {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: #fff;
-      z-index: 111;
-    }
-
-    .shapeOne {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 140px;
-      height: 140px;
-      border-radius: 20px;
-      z-index: 1;
-      opacity: 0.25;
-      transform: rotate(15deg);
-    }
-
-    .shapeTwo {
-      position: absolute;
-      top: 25px;
-      right: 25px;
-      width: 140px;
-      height: 140px;
-      border-radius: 20px;
-      z-index: 2;
-      opacity: 0.4;
-      transform: rotate(30deg);
-    }
-
-    .shapeThree {
-      position: absolute;
-      top: 35px;
-      right: 35px;
-      width: 140px;
-      height: 140px;
-      border-radius: 20px;
-      z-index: 3;
-      opacity: 0.6;
-      transform: rotate(45deg);
-    }
-  }
-
-  .template_9 {
-    position: relative;
-    border: 1px solid #000;
-    margin: 0px auto !important;
-    background-color: #000;
-    padding: 20px;
-    color: #fff;
-
-    .mainInfo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: max-content;
-      z-index: 111;
-    }
-
-    .link {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #fff;
-      z-index: 111;
-    }
-
-    .shapeOne {
-      position: absolute;
-      top: 0;
-      left: 30%;
-      width: 2px;
-      height: 100%;
-      z-index: 1;
-      opacity: 0.4;
-    }
-
-    .shapeTwo {
-      position: absolute;
-      top: 30%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      z-index: 1;
-      opacity: 0.4;
-    }
-
-    .shapeThree {
-      position: absolute;
-      bottom: 0;
-      right: 25%;
-      width: 2px;
-      height: 70%;
-      z-index: 1;
-      opacity: 0.4;
-    }
-  }
-}
-
-.designSection {
-  background: var(--sectionsBG);
-  border-radius: 10px;
-  color: #fff;
-  font-family: Ubuntu, Zain !important;
-
-  .switchTab {
-    button {
-      background: var(--sectionsBG);
-      border: 1px solid #9292925d;
-      box-shadow: 0 0 5px #000;
-      color: #fff;
-      border-radius: 8px;
-      padding: 5px 10px;
-      margin: 0px 5px;
-      font-weight: bold;
-    }
-
-    .selected {
-      box-shadow: 0 0 8px #000;
-      transition: all 0.3s ease-in-out;
-      background-color: #fff;
-      color: #000;
-    }
-  }
-
-  .designInnerSection {
-    background: var(--sectionsBG);
-    border-radius: 8px;
-    box-shadow: 0 0 5px #000;
-
-    .inputContainer {
-      background: var(--sectionsBG);
-      border-radius: 8px;
-      box-shadow: 0 0 5px #000;
-      display: flex;
-      align-items: center;
-      align-content: center;
-
-      label {
-        display: inline-block;
-        text-transform: capitalize;
-        font-weight: bold;
-      }
-
-      input {
-        margin-inline-start: 15px;
-        cursor: pointer;
-        background: var(--sectionsBG);
-      }
-
-      .grDegree,
-      .dimensionInp {
-        background: var(--sectionsBG);
-        border: 1px solid #9292925d;
-        box-shadow: 0 0 5px #000;
-        color: #fff;
-        border-radius: 8px;
-        padding: 5px;
-        margin-inline-start: 10px;
-        width: 50px;
-
-        &:focus {
-          outline: none;
-          box-shadow: 0 0 8px #000;
-          transition: all 0.3s ease-in-out;
-        }
-      }
-
-      .dimensionInp {
-        width: 70px;
-      }
-
-      span {
-        svg {
-          font-size: 20px;
-        }
-      }
-    }
-
-    .templateItem {
-      background: var(--sectionsBG);
-      border-radius: 8px;
-      box-shadow: 0 0 10px #000;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-
-    .selected {
-      box-shadow: 0 0 20px #000;
-      transform: scale(1.1);
-    }
-  }
-
-  .templatesSection {
-    max-height: 550px;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
 }
 
 .inner {
-  border-radius: 10px;
-  position: fixed;
-  top: 40%;
-  transform: translateY(-40%);
-  font-family: Ubuntu, Zain !important;
+    border-radius: 10px;
+    position: fixed;
+    top: 40%;
+    transform: translateY(-40%);
+    font-family: Ubuntu, Zain !important;
 
-  svg {
-    font-size: 50px;
-    color: #fd0000;
-  }
+    svg {
+        font-size: 50px;
+        color: #fd0000;
+    }
 }
